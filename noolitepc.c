@@ -45,36 +45,31 @@ int main(int argc, char * argv[])
      //Arg Control
 
      if (argc == 1) {
-          printf("Using: %s -help\n", argv[0]);
-          return -1;
+               printf("Using %s -api -<command> <channel> [<level>|<RGB>]\n", argv[0]);
+               printf("     <command> may be:\n");
+               printf("          -on_ch - Turn channel ON\n");
+               printf("          -off_ch - Turn channel OFF\n");
+               printf("          -sw_ch - Switch channel ON/OFF\n");
+               printf("          -set_ch - Set level for channel\n");
+               printf("          -dim_ch - Dimming channel\n");
+               printf("          -bind_ch - Bind channel\n");
+               printf("          -unbind_ch - Unbind channel\n");
+               printf("          -load_preset_ch - Load preset channel \n");
+               printf("          -save_preset_ch - Save preset channel \n");
+               printf("          -stop_reg_ch - Stop change channel/Stop dimming \n");
+               printf("          -roll_color_ch - Rolling color\n");
+               printf("          -sw_color_ch - Swith color\n");
+               printf("          -sw_mode_ch - Swith mode\n");
+               printf("          -speed_mode_sw_ch - Swith speed change color\n");
+               printf("          -set_color_ch - Set color R[0..255] G[0..255] B[0..255] \n");
+               printf("     <channel> must be [1..32]\n");
+               printf("     <level> must be [0..100] - using for -set_ch\n");
+               printf("     <RGB> must be [0..255] [0..255] [0..255] - using for - set_color_ch \n");
+               return -1;
      }
 
      if (argc >= 2) {
           if(strcmp (argv[1],"-api")){      //first arg "-api" needed
-               if (strcmp (argv[1],"-help")==0)
-               {
-                    printf("Using %s -api -<command> <channel> [<level>|<RGB>]\n", argv[0]);
-                    printf("     <command> may be:\n");
-                    printf("          -on_ch - Turn channel ON\n");
-                    printf("          -off_ch - Turn channel OFF\n");
-                    printf("          -sw_ch - Switch channel ON/OFF\n");
-                    printf("          -set_ch - Set level for channel\n");
-                    printf("          -dim_ch - Dimming channel\n");
-                    printf("          -bind_ch - Bind channel\n");
-                    printf("          -unbind_ch - Unbind channel\n");
-                    printf("          -load_preset_ch - Load preset channel \n");
-                    printf("          -save_preset_ch - Save preset channel \n");
-                    printf("          -stop_reg_ch - Stop change channel \n");
-                    printf("          -roll_color_ch - Rolling color\n");
-                    printf("          -sw_color_ch - Swith color\n");
-                    printf("          -sw_mode_ch - Swith mode\n");
-                    printf("          -speed_mode_sw_ch - Swith speed change color\n");
-                    printf("          -set_color_ch - Set color R[0..255] G[0..255] B[0..255] \n");
-                    printf("     <channel> must be [1..32]\n");
-                    printf("     <level> must be [0..100] - using for -set_ch\n");
-                    printf("     <RGB> must be [0..255] [0..255] [0..255] - using for - set_color_ch \n");
-                    return -1;
-               }
                printf("Неверно указан режим\nИспользование: %s -api -<command> <channel> [<level>]\n", argv[0]);
                return -1;
           }

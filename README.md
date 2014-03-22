@@ -65,7 +65,7 @@ Site: https://github.com/ermolenkom/noolite
   
 эта команда устанавливает на 1-м канале уровень в 33%
 
-ВНИМАНИЕ! Отлисие API от версии под Windows. 
+ВНИМАНИЕ! Отличие API от версии под Windows. 
 
   Необходим ПРОБЕЛ перед номером канала.
   
@@ -142,12 +142,12 @@ Using noolitepc -api -<command> <channel> [<level>|<RGB>]
   
 Для автоматического запуска в Ubuntu на уровнях 2,3,4,5 в режиме демона
 
-   `sudo cp majordomo_nooliterx.conf /etc/init`
+   `sudo cp nooliterx.conf /etc/init`
    
 Ручной запуск
- `start majordomo_nooliterx`
+ `start nooliterx`
 Ручной останов
- `stop majordomo_nooliterx`
+ `stop nooliterx`
 
 ###Применение в системе MajorDoMo:
 
