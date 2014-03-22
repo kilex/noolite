@@ -23,4 +23,4 @@ clean:
 	/bin/rm -f *.o *~ *.obj noolitepc nooliterx nooliterxcfg
 
 install:
-	@echo You must be root to install
+	sudo ./install.sh
