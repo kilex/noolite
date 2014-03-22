@@ -59,6 +59,7 @@ int main(int argc, char * argv[])
                     printf("          -off_ch - Turn channel OFF\n");
                     printf("          -sw_ch - Switch channel ON/OFF\n");
                     printf("          -set_ch - Set level for channel\n");
+                    printf("          -dim_ch - Dimming channel\n");
                     printf("          -bind_ch - Bind channel\n");
                     printf("          -unbind_ch - Unbind channel\n");
                     printf("          -load_preset_ch - Load preset channel \n");
@@ -143,6 +144,10 @@ int main(int argc, char * argv[])
           else if (strcmp(argv[2],"-stop_reg_ch")==0) //остановить регулировку 
           {
                COMMAND_ACTION[1] = 10;
+          } 
+          else if (strcmp(argv[2],"-dim_ch")==0) //dimming
+          {
+               COMMAND_ACTION[1] = 5;
           } 
           else if (strcmp(argv[2],"-roll_color_ch")==0) //включение плавного перебора цвета, выключается командой 10.
           {
